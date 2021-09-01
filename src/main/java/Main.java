@@ -1,4 +1,16 @@
+import config.BundleConfig;
+import entities.Bundle;
+import entities.Order;
+import entities.OrderItem;
+import entities.OrderResult;
+import exception.FormatCodeException;
+import input.InputResources;
 import lombok.extern.slf4j.Slf4j;
+import map.OrderParser;
+import output.OutputResource;
+import service.Calculator;
+import service.OrderMatchProcessor;
+import service.OrderProcessor;
 
 import java.util.List;
 import java.util.Map;
@@ -7,17 +19,22 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) throws Exception {
         log.info("Please input the order you want:");
-        InputResources Ir = new InputResources();
-        Order order = new Order();
-        Calculator cal = new Calculator();
-        List<OrderItem> orderItems = order.initialOrder(Ir.inputString());
-        Map<String, List<Bundle>> bundles = cal.initialBundles();
-        boolean b = cal.doEquals(orderItems, bundles);
-        if (b==false){
+        InputResources iR = new InputResources();
+        OrderParser orderParser=new OrderParser();
+        BundleConfig bundleConfig=new BundleConfig();
+        OutputResource outputResource = new OutputResource();
+        OrderProcessor orderProcessor=new OrderProcessor();
+        OrderMatchProcessor orderMatchProcessor= new OrderMatchProcessor();
+        Map<String, List<Bundle>> existBundles = bundleConfig.initialBundles();
+        List<String> inputOrder = iR.inputString();
+        Order order = orderParser.initialOrder(inputOrder);
+        List<OrderItem> orderItems = order.getOrderItems();
+        boolean b = orderMatchProcessor.doEquals(orderItems, existBundles);
+        boolean b1 = orderMatchProcessor.checkNumbers(orderItems);
+        if (b == false||b1) {
             throw new FormatCodeException("the format code is wrong please input again");
         }
-        List<Result> results = cal.doCalculate(orderItems, bundles);
-        OutputResource outputResource = new OutputResource();
-        outputResource.printResult(results);
+        List<OrderResult> orderResultList = orderProcessor.doCalculate(order, existBundles);
+        outputResource.printResult(orderResultList);
     }
 }

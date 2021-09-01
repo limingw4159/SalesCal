@@ -2,7 +2,11 @@
 
 ## Context
 
-Social media Influencers have been basing the price of their social media post on a single post basis. So If a brand required 10 posts (for example spread over a period) then they would be charged 10x the cost of a single post. One company has decided to allow social media influencers to sell posts in bundles and charge the brand on a per bundle basis. So if the Influencer sold image based posts in bundles of 5 and 10 and brand ordered 15 they would get a bundle of 10 and a bundle of 5.
+Social media Influencers have been basing the price of their social media post on a single post basis. So If a brand
+required 10 posts (for example spread over a period) then they would be charged 10x the cost of a single post. One
+company has decided to allow social media influencers to sell posts in bundles and charge the brand on a per bundle
+basis. So if the Influencer sold image based posts in bundles of 5 and 10 and brand ordered 15 they would get a bundle
+of 10 and a bundle of 5.
 
 The company currently allows the influencer to monitize the following submission formats:
 
@@ -14,17 +18,21 @@ The company currently allows the influencer to monitize the following submission
 
 ## Task
 
-Given a brands order, you are required to determine the cost and bundle breakdown for each submission format. For simplicity, each order should contain the minimal number of bundles.
+Given a brands order, you are required to determine the cost and bundle breakdown for each submission format. For
+simplicity, each order should contain the minimal number of bundles.
 
 ### Input:
 
-Each order has a series of lines with each line containing the number of items followed by the submission format code
-An example input:
+Each order has a series of lines with each line containing the number of items followed by the submission format code 
+* An example input:
+* Tips: if you need to finish the order, please type exit
+
 
 ```
 10 IMG
 15 FLAC
 13 VID
+exit
 ```
 
 ### Output:
@@ -43,6 +51,7 @@ A successfully passing test(s) that demonstrates the following output: (The form
 ```
 
 ## Task Requirement:
+
 1. Using gradle
 2. Using Java 8 stream and lambda when you can
 3. Using lombok
