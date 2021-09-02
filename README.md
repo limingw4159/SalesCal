@@ -23,10 +23,10 @@ simplicity, each order should contain the minimal number of bundles.
 
 ### Input:
 
-Each order has a series of lines with each line containing the number of items followed by the submission format code 
+Each order has a series of lines with each line containing the number of items followed by the submission format code
+
 * An example input:
 * Tips: if you need to finish the order, please type exit
-
 
 ```
 10 IMG

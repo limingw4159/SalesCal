@@ -15,6 +15,4 @@ public class Bundle {
     private int minNum;
 
 
-
-
 }

@@ -1,20 +1,13 @@
 package service;
 
 import entities.Bundle;
-import entities.OrderItem;
 import entities.OrderResultItems;
-import lombok.Getter;
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 @Slf4j
-@Setter
-@Getter
 public class Calculator {
 
     public List<OrderResultItems> calEachItems(int orderNum, List<Bundle> bundles1) {

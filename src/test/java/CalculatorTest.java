@@ -1,5 +1,8 @@
 import config.BundleConfig;
-import entities.*;
+import entities.Bundle;
+import entities.Order;
+import entities.OrderItem;
+import entities.OrderResultItems;
 import lombok.extern.slf4j.Slf4j;
 import map.OrderParser;
 import org.junit.jupiter.api.Assertions;
@@ -28,12 +31,13 @@ class CalculatorTest {
         userInput.add("18 FLAC");
         userInput.add("21 img");
         userInput.add("35 vid");
-        orderParser=new OrderParser();
+        orderParser = new OrderParser();
         calculator = new Calculator();
         order = new Order();
-        bundleConfig=new BundleConfig();
+        bundleConfig = new BundleConfig();
 
     }
+
     @Test
     void shouldGetRightUserInput() {
         Assertions.assertEquals("18 FLAC", userInput.get(0));
@@ -41,7 +45,7 @@ class CalculatorTest {
 
     @Test
     void shouldInitialOrder() {
-       order = orderParser.initialOrder(userInput);
+        order = orderParser.initialOrder(userInput);
         Assertions.assertTrue(order.getOrderItems().size() > 2);
     }
 
@@ -54,7 +58,7 @@ class CalculatorTest {
     @Test
     void shouldNotGetResults() {
         order = orderParser.initialOrder(userInput);
-        bundles= bundleConfig.initialBundles();
+        bundles = bundleConfig.initialBundles();
         List<Bundle> img = bundles.get("IMG");
         List<OrderResultItems> orderResultItemsList = calculator.calEachItems(39, img);
         Assertions.assertFalse(orderResultItemsList.size() > 2);

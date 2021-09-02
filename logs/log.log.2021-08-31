@@ -1,0 +1,65 @@
+2021-08-31 20:02:24  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 20:02:34  [ main:9891 ] - [ INFO ]  15 IMG $1250.0
+2021-08-31 20:02:34  [ main:9895 ] - [ INFO ]   1 x 10  $800.0
+2021-08-31 20:02:34  [ main:9896 ] - [ INFO ]   1 x 5  $450.0
+2021-08-31 20:02:34  [ main:9896 ] - [ INFO ]  15 FLAC $1957.5
+2021-08-31 20:02:34  [ main:9896 ] - [ INFO ]   1 x 9  $1147.5
+2021-08-31 20:02:34  [ main:9896 ] - [ INFO ]   1 x 6  $810.0
+2021-08-31 20:02:34  [ main:9896 ] - [ INFO ]  21 VID $3630.0
+2021-08-31 20:02:34  [ main:9896 ] - [ INFO ]   2 x 9  $3060.0
+2021-08-31 20:02:34  [ main:9896 ] - [ INFO ]   1 x 3  $570.0
+2021-08-31 20:05:43  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 20:05:58  [ main:14897 ] - [ INFO ]  1000 IMG $80000.0
+2021-08-31 20:05:58  [ main:14901 ] - [ INFO ]   100 x 10  $80000.0
+2021-08-31 20:05:58  [ main:14901 ] - [ INFO ]  1800 FLAC $229500.0
+2021-08-31 20:05:58  [ main:14901 ] - [ INFO ]   200 x 9  $229500.0
+2021-08-31 20:05:58  [ main:14902 ] - [ INFO ]  2001 VID $340230.0
+2021-08-31 20:05:58  [ main:14902 ] - [ INFO ]   222 x 9  $339660.0
+2021-08-31 20:05:58  [ main:14902 ] - [ INFO ]   1 x 3  $570.0
+2021-08-31 22:52:49  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 22:53:00  [ main:11816 ] - [ ERROR ]  the format is wrong, please input again
+2021-08-31 22:54:22  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 22:54:30  [ main:7794 ] - [ ERROR ]  the format is wrong, please input again
+2021-08-31 22:55:54  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:01:46  [ main:1 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:04:26  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:04:42  [ main:15856 ] - [ INFO ]  25 IMG $2050.0
+2021-08-31 23:04:42  [ main:15860 ] - [ INFO ]   2 x 10  $1600.0
+2021-08-31 23:04:42  [ main:15860 ] - [ INFO ]   1 x 5  $450.0
+2021-08-31 23:04:58  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:05:11  [ main:12829 ] - [ ERROR ]  the format is wrong, please input again
+2021-08-31 23:11:03  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:17:43  [ main:400224 ] - [ INFO ]  
+2021-08-31 23:17:43  [ main:400226 ] - [ ERROR ]  the format is wrong, please input again
+2021-08-31 23:17:44  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:17:54  [ main:9680 ] - [ ERROR ]  the format is wrong, please input again
+2021-08-31 23:25:46  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:25:54  [ main:7837 ] - [ ERROR ]  the format is wrong, please input again
+2021-08-31 23:26:05  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:26:11  [ main:5878 ] - [ INFO ]  20 IMG $1600.0
+2021-08-31 23:26:11  [ main:5884 ] - [ INFO ]   2 x 10  $1600.0
+2021-08-31 23:26:23  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:26:29  [ main:5868 ] - [ INFO ]  20 IMG $1600.0
+2021-08-31 23:26:29  [ main:5873 ] - [ INFO ]   2 x 10  $1600.0
+2021-08-31 23:26:53  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:28:17  [ main:84206 ] - [ INFO ]  20 IMG $1600.0
+2021-08-31 23:28:17  [ main:84210 ] - [ INFO ]   2 x 10  $1600.0
+2021-08-31 23:29:19  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:30:22  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:32:16  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:32:28  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:34:05  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:34:42  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:35:47  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:37:58  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:40:19  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:40:28  [ main:0 ] - [ INFO ]  Please input the order you want:
+2021-08-31 23:40:45  [ main:16880 ] - [ INFO ]  20 IMG $1600.0
+2021-08-31 23:40:45  [ main:16885 ] - [ INFO ]   2 x 10  $1600.0
+2021-08-31 23:40:45  [ main:16885 ] - [ INFO ]  27 FLAC $3442.5
+2021-08-31 23:40:45  [ main:16885 ] - [ INFO ]   3 x 9  $3442.5
+2021-08-31 23:40:45  [ main:16885 ] - [ INFO ]  36 VID $6120.0
+2021-08-31 23:40:45  [ main:16885 ] - [ INFO ]   4 x 9  $6120.0
+2021-08-31 23:40:45  [ main:16886 ] - [ INFO ]  75 FLAC $9607.5
+2021-08-31 23:40:45  [ main:16886 ] - [ INFO ]   8 x 9  $9180.0
+2021-08-31 23:40:45  [ main:16886 ] - [ INFO ]   1 x 3  $427.5

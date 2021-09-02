@@ -20,7 +20,7 @@ public class OrderResult {
     public int calTotalNum(List<OrderResultItems> orderResultItemsList) {
         orderResultItemsList.stream().forEach(
                 orderResultItems -> {
-                    totalNum =totalNum+ orderResultItems.getBundle() * orderResultItems.getSum();
+                    totalNum = totalNum + orderResultItems.getBundle() * orderResultItems.getSum();
                 }
         );
         return totalNum;
@@ -30,7 +30,7 @@ public class OrderResult {
     public double calTotalPrice(List<OrderResultItems> orderResultItemsList) {
         orderResultItemsList.stream().forEach(
                 orderResultItems -> {
-                    totalPrice=totalPrice+orderResultItems.getPrice();
+                    totalPrice = totalPrice + orderResultItems.getPrice();
                 }
         );
         return totalPrice;

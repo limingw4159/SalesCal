@@ -11,8 +11,8 @@ import java.util.List;
 public class OrderParser {
 
     public Order initialOrder(List<String> inputOrder) {
-        Order order= new Order();
-        List<OrderItem> orderItemList=new ArrayList<>();
+        Order order = new Order();
+        List<OrderItem> orderItemList = new ArrayList<>();
         inputOrder.stream().forEach(input -> {
             int num = 0;
             String format = null;

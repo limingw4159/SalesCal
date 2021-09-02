@@ -9,7 +9,6 @@ import java.util.List;
 @Slf4j
 public class OutputResource {
 
-
     public void printResult(List<OrderResult> results) {
         results.stream().forEach(
                 result -> {
