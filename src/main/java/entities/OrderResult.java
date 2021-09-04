@@ -1,9 +1,6 @@
 package entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
@@ -11,13 +8,15 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class OrderResult {
     private int totalNum;
     private String type;
     private double totalPrice;
     private List<OrderResultItems> orderResultItemsList;
 
-    public int calTotalNum(List<OrderResultItems> orderResultItemsList) {
+    public int calTotalNumForOrderResult(List<OrderResultItems> orderResultItemsList) {
+
         orderResultItemsList.stream().forEach(
                 orderResultItems -> {
                     totalNum = totalNum + orderResultItems.getBundle() * orderResultItems.getSum();
@@ -27,12 +26,14 @@ public class OrderResult {
 
     }
 
-    public double calTotalPrice(List<OrderResultItems> orderResultItemsList) {
+    public double calTotalPriceForOrderResult(List<OrderResultItems> orderResultItemsList) {
+
         orderResultItemsList.stream().forEach(
                 orderResultItems -> {
                     totalPrice = totalPrice + orderResultItems.getPrice();
                 }
         );
+
         return totalPrice;
     }
 }

@@ -1,30 +1,46 @@
 package service;
 
 import entities.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class OrderProcessor {
+    List<OrderResult> orderResultList;
+    OrderResultItemProcessor calculator;
+    List<OrderItem> orderItems;
+    OrderResult orderResult;
+
     public List<OrderResult> doCalculate(Order order, Map<String, List<Bundle>> bundles) {
-        List<OrderResult> orderResultList = new ArrayList<>();
-        Calculator calculator = new Calculator();
-        List<OrderItem> orderItems = order.getOrderItems();
+
+        orderResultList = new ArrayList<>();
+        calculator = new OrderResultItemProcessor();
+        orderItems = order.getOrderItems();
+
         orderItems.stream().forEach(
                 orderItem -> {
-                    OrderResult orderResult = new OrderResult();
+                    orderResult = new OrderResult();
                     String formatCode = orderItem.getFormatCode();
-                    int orderNum = orderItem.getNum();
-                    List<Bundle> bundles1 = bundles.get(formatCode);
-                    List<OrderResultItems> orderResultItemsList = calculator.calEachItems(orderNum, bundles1);
-                    int totalNum = orderResult.calTotalNum(orderResultItemsList);
-                    double totalPrice = orderResult.calTotalPrice(orderResultItemsList);
-                    orderResult.setOrderResultItemsList(orderResultItemsList);
-                    orderResult.setTotalNum(totalNum);
-                    orderResult.setType(formatCode);
-                    orderResult.setTotalPrice(totalPrice);
-                    orderResultList.add(orderResult);
+                    List<Bundle> inputFormat = bundles.get(formatCode);
+                    List<OrderResultItems> orderResultItemsList =
+                            calculator.calculate(orderItem, inputFormat);
+
+                    orderResultList.add(orderResult.builder()
+                            .type(formatCode)
+                            .orderResultItemsList(orderResultItemsList)
+                            .totalNum(orderResult.calTotalNumForOrderResult(orderResultItemsList))
+                            .totalPrice(orderResult.calTotalPriceForOrderResult(orderResultItemsList))
+                            .build());
+
                 }
         );
         return orderResultList;

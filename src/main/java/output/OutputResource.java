@@ -10,6 +10,7 @@ import java.util.List;
 public class OutputResource {
 
     public void printResult(List<OrderResult> results) {
+
         results.stream().forEach(
                 result -> {
                     log.info(result.getTotalNum() + " " + result.getType() + " " + "$" + result.getTotalPrice());

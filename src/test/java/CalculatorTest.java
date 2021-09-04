@@ -4,11 +4,11 @@ import entities.Order;
 import entities.OrderItem;
 import entities.OrderResultItems;
 import lombok.extern.slf4j.Slf4j;
-import map.OrderParser;
+import mappers.OrderParser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import service.Calculator;
+import service.OrderResultItemProcessor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,11 +19,12 @@ class CalculatorTest {
 
     private static ArrayList<String> userInput;
     private static Order order;
-    private static Calculator calculator;
-    private static List<OrderItem> orderItems;
+    private static OrderResultItemProcessor orderResultItemProcessor;
+    private static OrderItem orderItem;
     private static Map<String, List<Bundle>> bundles;
     private static BundleConfig bundleConfig;
     private static OrderParser orderParser;
+
 
     @BeforeAll
     static void initialInput() {
@@ -32,9 +33,10 @@ class CalculatorTest {
         userInput.add("21 img");
         userInput.add("35 vid");
         orderParser = new OrderParser();
-        calculator = new Calculator();
+        orderResultItemProcessor = new OrderResultItemProcessor();
         order = new Order();
         bundleConfig = new BundleConfig();
+        orderItem=new OrderItem(18,"img");
 
     }
 
@@ -60,7 +62,7 @@ class CalculatorTest {
         order = orderParser.initialOrder(userInput);
         bundles = bundleConfig.initialBundles();
         List<Bundle> img = bundles.get("IMG");
-        List<OrderResultItems> orderResultItemsList = calculator.calEachItems(39, img);
+        List<OrderResultItems> orderResultItemsList = orderResultItemProcessor.calculate(orderItem,img);
         Assertions.assertFalse(orderResultItemsList.size() > 2);
     }
 }
