@@ -34,7 +34,7 @@ public class OrderProcessor {
                     List<OrderResultItems> orderResultItemsList =
                             calculator.calculate(orderItem, inputFormat);
 
-                    orderResultList.add(orderResult.builder()
+                    orderResultList.add(OrderResult.builder()
                             .type(formatCode)
                             .orderResultItemsList(orderResultItemsList)
                             .totalNum(orderResult.calTotalNumForOrderResult(orderResultItemsList))
