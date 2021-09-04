@@ -31,9 +31,9 @@ public class Main {
         Order order = orderParser.initialOrder(inputOrder);
         List<OrderItem> orderItems = order.getOrderItems();
 
-        boolean b1 = orderMatchProcessor.checkNumbers(orderItems);
-
-        if (b1) {
+        boolean checkUserInputNumbers = orderMatchProcessor.checkNumbers(orderItems);
+        boolean checkUserInputFormat = orderMatchProcessor.doEquals(orderItems, existBundles);
+        if (checkUserInputNumbers==false||checkUserInputFormat==false) {
             throw new FormatCodeException("the format code is wrong please input again");
         }
 

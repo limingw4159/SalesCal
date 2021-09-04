@@ -36,7 +36,7 @@ class CalculatorTest {
         orderResultItemProcessor = new OrderResultItemProcessor();
         order = new Order();
         bundleConfig = new BundleConfig();
-        orderItem=new OrderItem(18,"img");
+        orderItem = new OrderItem(18, "img");
 
     }
 
@@ -62,7 +62,7 @@ class CalculatorTest {
         order = orderParser.initialOrder(userInput);
         bundles = bundleConfig.initialBundles();
         List<Bundle> img = bundles.get("IMG");
-        List<OrderResultItems> orderResultItemsList = orderResultItemProcessor.calculate(orderItem,img);
+        List<OrderResultItems> orderResultItemsList = orderResultItemProcessor.calculate(orderItem, img);
         Assertions.assertFalse(orderResultItemsList.size() > 2);
     }
 }
